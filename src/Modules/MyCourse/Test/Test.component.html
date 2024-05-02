@@ -1,0 +1,39 @@
+<section class="special_cource padding_top">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-5">
+              <div class="section_tittle text-center">
+                  <h2>All Tests</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6 col-lg-4" *ngFor="let item of Courses">
+              <div class="single_special_cource" (click)="QuestionTest(item.id)">
+                <img src="https://drive.google.com/uc?id=13_SIi_4Ulq3v7czvASH59aVe7wy3IF9b" alt="وصف الصورة">
+                <!-- <img [src]="item.poster" class="special_img" alt=""> -->
+                  <div class="special_cource_text">
+                      <b class="btn_4">{{item.name}}</b>
+                      <b><h6>Full Mark :{{item.fullMark}}</h6></b>
+                      <b>
+                        <h6>Question Number :{{item.count}}</h6>
+                      </b>
+                      
+                      <div class="author_info">
+                          <div class="author_img">
+                              <img src="assets/img/Eslam.jpg" style="width: 50px;height: 50px;border-radius: 25px;" alt="">
+                              <div class="author_info_text">
+                                  <p>Conduct by:</p>
+                                  <h5><a href="#">Eslam Khalil</a></h5>
+                              </div>
+                          </div>
+                          
+                      </div>
+                  </div>
+                  <!-- <h4>Full Mark {{item.fullMark}}</h4>
+                  <h4>Question Number {{item.count}}</h4> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</section>

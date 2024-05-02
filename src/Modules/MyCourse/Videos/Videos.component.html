@@ -1,0 +1,23 @@
+<br><br>
+<br><br>
+<body>
+    <h2>Responsive Table</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+        <thead>
+        <tr>
+            <th>&nbsp;&nbsp;Video&nbsp;&nbsp;</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of response.values">
+            <td><video src={{item.video}} controls></video></td>
+            <td>{{item.name}}</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+</body>
+<br><br>
+<br><br>

@@ -1,0 +1,48 @@
+<!-- QuestionCheapter.component.html -->
+<br>
+<br>
+<br>
+<br>
+<!-- QuestionCheapter.component.html -->
+
+<form>
+    <div *ngIf="response && response.values.length > 0">
+      <div class="quiz-container">
+        <!-- Display current question -->
+        <h2 class="question">{{ response.values[currentQuestionIndex]?.quction }}?</h2>
+        <div class="options">
+          <div *ngFor="let choice of parseChoices(response.values[currentQuestionIndex]?.choices[0]?.choice)">
+            <label>
+              <input type="radio" name="answer" [value]="choice" (change)="onSelect(choice)">
+              {{ choice}}
+            </label>
+          </div>
+        </div>
+        <div class="pagination">
+          <!-- Display pagination controls -->
+          <button type="button" (click)="goToPreviousQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+          <span>Question {{ currentQuestionIndex + 1 }} of {{ response.values.length }}</span>
+          <button type="button" (click)="goToNextQuestion()" [disabled]="currentQuestionIndex === response.values.length - 1">Next</button>
+        </div>
+        <!-- You can display the result or feedback message here -->
+        <p id="result"></p>
+      </div>
+    </div>
+    <!-- <button style="margin-right: 50%;" type="button" (click)="onSubmit()">Finshed</button> -->
+    <div class="row justify-content-end">
+        <div class="col-auto">
+          <button  type="button" (click)="onSubmit()" class="btn btn-primary">Finshed</button>
+        </div>
+      </div>
+  </form>
+  <!-- <div>
+    <ul>
+        <li *ngFor="let cho of selectedChoices">{{cho}}</li>
+    </ul>
+  </div> -->
+  
+<br>
+<br>
+<br>
+<br>
+  

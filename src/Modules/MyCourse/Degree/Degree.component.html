@@ -1,0 +1,26 @@
+<br><br>
+<br><br>
+<body>
+    <h2>Responsive Table</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+        <thead>
+        <tr>
+            <th>&nbsp;&nbsp;Test&nbsp;&nbsp;</th>
+            <th>Degree</th>
+            <th>fullMark</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of response.values">
+            <td>{{item.test.name}}</td>
+            <td>{{item.degree}}</td>
+            <td>{{item.test.fullMark}}</td>
+
+        </tr>
+        <tbody>
+    </table>
+</div>
+</body>
+<br><br>
+<br><br>

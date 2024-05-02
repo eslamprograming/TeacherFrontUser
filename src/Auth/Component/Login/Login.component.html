@@ -1,0 +1,18 @@
+<form (ngSubmit)="login()">
+  <div class="imgcontainer">
+    <img src="assets/img/advance_feature_img.png" style="height: 325px;width: 600px;" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="loginData.email" required>
+
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="loginData.password" required>
+
+    <button type="submit" class="btn_2">Login</button>
+    <a href="/Register" style="text-align: center;text-decoration: none;" class="btn_2">Register</a>
+
+    
+  </div>
+</form>

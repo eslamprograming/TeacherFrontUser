@@ -1,0 +1,25 @@
+<br><br>
+<br><br>
+<h2>Responsive Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Cheapter Name</th>
+            <th>Note</th>
+            <th>Videos</th>
+            <th>Questions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of response.values">
+            <td>{{item.name}}</td>
+            <td><a href={{item.note}} >Note</a></td>
+            <td  (click)="Videos(item.id)">Videos</td>
+            <td  (click)="Questions(item.id)">Question</td>
+        </tr>
+        <tbody>
+    </table>
+</div>
+<br><br>
+<br><br>

@@ -1,0 +1,47 @@
+<section class="special_cource padding_top">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-xl-5">
+              <div class="section_tittle text-center">
+                  <h2>All Courses</h2>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-6 col-lg-4" *ngFor="let item of Courses">
+              <div class="single_special_cource" (click)="CouresDetails(item.id)">
+                <img src="https://drive.google.com/uc?id=13_SIi_4Ulq3v7czvASH59aVe7wy3IF9b" alt="وصف الصورة">
+                <!-- <img [src]="item.poster" class="special_img" alt=""> -->
+                  <div class="special_cource_text">
+                      <b class="btn_4">{{item.name}}</b>
+                      <h4>$130.00</h4>
+                      <b >
+                          <h3>{{item.name}}</h3>
+                      </b>
+                      
+                      <div class="author_info">
+                          <div class="author_img">
+                              <img src="assets/img/Eslam.jpg" style="width: 50px;height: 50px;border-radius: 25px;" alt="">
+                              <div class="author_info_text">
+                                  <p>Conduct by:</p>
+                                  <h5><a href="#">Eslam Khalil</a></h5>
+                              </div>
+                          </div>
+                          <!-- <div class="author_rating">
+                              <div class="rating">
+                                  <a href="#"><img src="assets/img/icon/color_star.svg" alt=""></a>
+                                  <a href="#"><img src="assets/img/icon/color_star.svg" alt=""></a>
+                                  <a href="#"><img src="assets/img/icon/color_star.svg" alt=""></a>
+                                  <a href="#"><img src="assets/img/icon/color_star.svg" alt=""></a>
+                                  <a href="#"><img src="assets/img/icon/star.svg" alt=""></a>
+                              </div>
+                              <p>3.8 Ratings</p>
+                          </div> -->
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
